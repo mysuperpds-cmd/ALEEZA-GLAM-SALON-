@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export default async function handler(req, res) {
