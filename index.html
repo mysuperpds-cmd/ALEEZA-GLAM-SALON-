@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Glam Salon & Aesthetics Gujrat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      // Global Error Handler to debug "No Preview"
+      window.addEventListener('error', function(e) {
+        console.error("Global Error:", e.error);
+        const root = document.getElementById('root');
+        if (root && root.innerHTML === '') {
+           document.body.innerHTML = `
+             <div style="padding: 20px; font-family: sans-serif; color: #be185d;">
+               <h1>Startup Error</h1>
+               <p>The app failed to load. Technical details:</p>
+               <pre style="background: #f0f0f0; padding: 10px; border-radius: 8px; overflow: auto;">${e.message}\n${e.filename}:${e.lineno}</pre>
+             </div>
+           `;
+        }
+      });
+
+      // Safety polyfill to prevent "process is not defined" errors
+      window.process = window.process || { env: {} };
+      
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              glam: {
+                pink: '#fce7f3',
+                gold: '#d4af37',
+                dark: '#1a1a1a',
+                rose: '#be185d',
+              }
+            },
+            fontFamily: {
+              serif: ['Playfair Display', 'serif'],
+              sans: ['Lato', 'sans-serif'],
+              urdu: ['Noto Nastaliq Urdu', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html, body, #root {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #fafafa;
+      }
+      /* Custom scrollbar for transcripts */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.1/client",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

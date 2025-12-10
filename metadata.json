@@ -1,0 +1,7 @@
+{
+  "name": "ALEEZA Glam Salon & Aesthetics  Gujrat ",
+  "description": "A bilingual (Urdu/English) voice agent for Glam Salon & Aesthetics Gujrat (Women Only).",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
